@@ -103,3 +103,29 @@ i {
   border-width: 0.8rem 0 0.8rem 1.6rem;
   border-color: transparent var(--secondary) transparent;
 }
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 25rem;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -28rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 2rem;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 9rem);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 4rem;
+  }
+  .timeline ul li:nth-child(even) div:before {
+    left: -1.5rem;
+    border-width: 0.8rem 1.6rem 0.8rem 0;
+    border-color: transparent var(--secondary) transparent;
+  }
+}
