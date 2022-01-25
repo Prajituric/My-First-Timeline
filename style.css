@@ -1,0 +1,105 @@
+:root {
+  --primary: #425b84;
+  --secondary: #5b7bb4;
+  --max-width: 1100pc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: normal 2rem/2.5rem;
+  color: #fff;
+  background: var(--primary);
+  overflow-x: hidden;
+  padding-bottom: 1.5rem;
+}
+
+.main-header {
+  background: var(--secondary);
+  padding: 2rem 0;
+  line-height: 4rem;
+  font-size: 1.5rem;
+}
+
+i {
+  padding-right: 0.8rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timeline ul {
+  background: var(--primary);
+  padding: 5rem 0;
+}
+
+.timeline ul li {
+  list-style: none;
+  position: relative;
+  width: 0.6rem;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  background: #fff;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 40rem;
+  padding: 2rem;
+  background: var(--secondary);
+  transition: all 0.4s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 4rem;
+}
+
+.timeline ul li:nth-child(even) div {
+  right: 43.5rem;
+}
+
+.timeline ul li:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--secondary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: background 0.5s ease-in-out;
+}
+
+.timeline div::before {
+  content: "";
+  position: absolute;
+  bottom: 0rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div:before {
+  left: -1.5rem;
+  border-width: 0.8rem 1.6rem 0.8rem 0;
+  border-color: transparent var(--secondary) transparent;
+}
+
+.timeline ul li:nth-child(even) div:before {
+  right: -1.5rem;
+  border-width: 0.8rem 0 0.8rem 1.6rem;
+  border-color: transparent var(--secondary) transparent;
+}
