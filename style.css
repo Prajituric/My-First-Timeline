@@ -59,15 +59,19 @@ i {
   width: 40rem;
   padding: 2rem;
   background: var(--secondary);
+  visibility: hidden;
+  opacity: 0;
   transition: all 0.4s ease-in-out;
 }
 
 .timeline ul li:nth-child(odd) div {
   left: 4rem;
+  transform: translate(20rem, 0);
 }
 
 .timeline ul li:nth-child(even) div {
   right: 43.5rem;
+  transform: translate(-20rem, 0);
 }
 
 .timeline ul li:after {
@@ -77,7 +81,7 @@ i {
   bottom: 0;
   width: 2.5rem;
   height: 2.5rem;
-  background: var(--secondary);
+  background: inherit;
   border-radius: 50%;
   transform: translateX(-50%);
   transition: background 0.5s ease-in-out;
@@ -128,4 +132,14 @@ i {
     border-width: 0.8rem 1.6rem 0.8rem 0;
     border-color: transparent var(--secondary) transparent;
   }
+}
+
+.timeline ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+.timeline ul li.show:after {
+  background: var(--secondary);
 }
